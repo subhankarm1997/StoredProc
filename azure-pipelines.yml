@@ -1,0 +1,11 @@
+﻿trigger:
+- master  # Modify this branch if needed
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: PowerShell@2
+  displayName: 'Run PowerShell script'
+  inputs:
+    filePath: 'PWC/CreateOrUpdateStoredProc.ps1'
